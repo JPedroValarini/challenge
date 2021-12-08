@@ -1,0 +1,27 @@
+@import './bootstrap_custom.scss';
+
+
+h1{
+  padding-top: 30px;
+}
+.navbar {
+  background-color: #343a40 !important;
+}
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+a{
+  color:white !important;
+}
+
+.login-form {
+  margin: auto !important;
+  margin-top: 40px !important;
+}
+
+input submit{
+  background-color: #343a40 !important;
+}
