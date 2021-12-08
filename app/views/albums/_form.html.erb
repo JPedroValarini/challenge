@@ -1,0 +1,29 @@
+<%= form_with(model: album) do |form| %>
+  <p class="form-group">
+    <%= form.label :Name %>
+    <%= form.text_field :name, autofocus: true, class:"form-control" %>
+  </p>
+  <p class="form-group">
+    <%= form.label :Year %>
+    <%= form.text_field :year, autofocus: true, class:"form-control" %>
+  </p>
+  <p class="form-group">
+    <%= form.label :Artist %>
+    <%= form.text_field :artist, autofocus: true, class:"form-control" %>
+  </p>
+  <p>
+    <%= form.submit %>
+    <%= link_to 'Cancel', root_path, class: 'btn btn-default'%>
+  </p>
+  <% if album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+        <% album.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
