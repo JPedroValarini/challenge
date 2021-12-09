@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          enum roles: { user: 'user', admin: 'admin' }
+
+  def admin?
+    role == "admin"
+  end
 end

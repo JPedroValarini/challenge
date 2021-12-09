@@ -20,6 +20,9 @@
             <td><%= link_to 'Edit', edit_album_path(album), :class => "btn btn-warning" %></td>
             <td><%= link_to 'Delete', album, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
           </tr>
+          <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+          <% end %>
         <% end %>
       </tbody>
     </table>

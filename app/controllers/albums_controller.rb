@@ -51,10 +51,17 @@ class AlbumsController < ApplicationController
 
   # DELETE /albums/1 or /albums/1.json
   def destroy
-    @album.destroy
-    respond_to do |format|
-      format.html { redirect_to albums_url, notice: "Album was successfully destroyed." }
-      format.json { head :no_content }
+    if can? :destroy, @album
+      @album.destroy
+      respond_to do |format|
+        format.html { redirect_to albums_url, notice: "Album was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to albums_url, notice: "User don't have permission." }
+        format.json { head :no_content }
+      end
     end
   end
 
