@@ -8,7 +8,7 @@ class Api
     @options = {}
   end
 
-  def task
+  def tasks
     HTTParty.get(
       "#{BASE_URL}/task",
       headers: {"Basic" => "#{TOKEN}"},

@@ -7,20 +7,18 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
 
-  def task_artist
-    @tasks = @api_service.tasks
-  end
-  # GET /albums/1 or /albums/1.json
   def show
   end
 
   # GET /albums/new
   def new
     @album = Album.new
+    @tasks = @api_service.tasks.parsed_response.flatten
   end
 
   # GET /albums/1/edit
   def edit
+    @tasks = @api_service.tasks.parsed_response.flatten
   end
 
   # POST /albums or /albums.json

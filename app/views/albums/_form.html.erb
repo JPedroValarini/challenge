@@ -1,7 +1,7 @@
 <%= form_with(model: album) do |form| %>
   <p class="form-group">
     <%= form.label :Name %>
-    <%= form.text_field :name, autofocus: true, class:"form-control" %>
+    <%= form.select :name, @tasks.pluck('name'), class:"form-control" %>
   </p>
   <p class="form-group">
     <%= form.label :Year %>

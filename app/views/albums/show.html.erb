@@ -1,4 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="container pad-show">
+  <div class="jumbotron">
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+    <p>
+      <strong>Name:</strong>
+      <%= @album.name %>
+    </p>
+
+    <p>
+      <strong>Year:</strong>
+      <%= @album.year %>
+    </p>
+
+    <p>
+      <strong>Artist:</strong>
+      <%= @album.artist %>
+    </p>
+
+    <%= link_to 'Edit', edit_album_path(@album), :class => "btn btn-dark" %>
+    <%= link_to 'Back', albums_path, :class => "btn btn-dark" %>
+  </div>
+</div>
+
