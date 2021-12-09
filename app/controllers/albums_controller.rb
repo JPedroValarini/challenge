@@ -1,11 +1,15 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: %i[ show edit update destroy ]
+  before_action :set_api
 
   # GET /albums or /albums.json
   def index
     @albums = Album.all
   end
 
+  def task_artist
+    @tasks = @api_service.tasks
+  end
   # GET /albums/1 or /albums/1.json
   def show
   end
@@ -66,4 +70,8 @@ class AlbumsController < ApplicationController
     def album_params
       params.require(:album).permit(:name, :year, :artist)
     end
+
+  def set_api
+    @api_service = Api.new
+  end
 end
