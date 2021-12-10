@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Desafio full-stack Moat Builders
 
-Things you may want to cover:
+## Moat Builders
 
-* Ruby version
+### Gem's:
 
-* System dependencies
+  - devise: for user create
+  - httparty: to make requests on the api
+  - cancancan: to manage acess
+  - dotenv-rails: to mock acess key
 
-* Configuration
+### SETUP:
 
-* Database creation
+  - git clone git@github.com:JPedroValarini/challenge.git
+  - bundle install
+  - yarn add bootstrap@4.3.1 jquery popper.js
+  - rails s
+  - Database Postgres it is necessary to change the access password in database.yml.
 
-* Database initialization
+### Test Web:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - https://app-music-moat.herokuapp.com/
+  - create 2 users, admin and user in Register, and feel free to test the features.

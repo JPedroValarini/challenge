@@ -76,7 +76,8 @@ class AlbumsController < ApplicationController
       params.require(:album).permit(:name, :year, :artist)
     end
 
-  def set_api
-    @api_service = Api.new
+    def set_api
+      @api_service = Api.new
+    end
   end
 end
