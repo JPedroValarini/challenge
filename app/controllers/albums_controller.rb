@@ -79,5 +79,4 @@ class AlbumsController < ApplicationController
     def set_api
       @api_service = Api.new
     end
-  end
 end
